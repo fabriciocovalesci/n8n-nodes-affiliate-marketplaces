@@ -1,0 +1,41 @@
+{
+  "name": "@fabcovalesci/n8n-nodes-affiliate-marketplaces",
+  "version": "0.1.6",
+  "description": "Crawlers de listas de afiliados (Mercado Livre hoje; extensível para Amazon e outros marketplaces).",
+  "keywords": [
+    "n8n-community-node-package",
+    "affiliate",
+    "mercadolivre",
+    "marketplace"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/fabcovalesci/n8n-nodes-affiliate-marketplaces#readme",
+  "author": "fabcovalesci",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabcovalesci/n8n-nodes-affiliate-marketplaces.git"
+  },
+  "main": "nodes/AffiliateMarketplaceList/AffiliateMarketplaceList.node.js",
+  "scripts": {
+    "test:lib": "node -e \"require('./lib/mercadolivreSocialList.js'); console.log('lib ok');\"",
+    "smoke:url": "node scripts/smoke-url.js"
+  },
+  "files": [
+    "nodes",
+    "lib",
+    "README.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "nodes/AffiliateMarketplaceList/AffiliateMarketplaceList.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
